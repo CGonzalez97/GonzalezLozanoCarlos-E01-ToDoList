@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ListadoCompleto</title>
+</head>
+<body>
+
+    <h1>Lista Completa</h1>
+
+    <table>
+        <tr th:each="tarea : ${lista}">
+            <td th:text="${tarea.id}"></td>
+            <td th:text="${tarea.nombre}"></td>
+            <td th:text="${tarea.fechaCre}"></td>
+            <td th:text="${tarea.fechaCad}"></td>
+        </tr>
+    </table>
+
+    <a action="#" th:action="@{/ingresarNuevo}"></a>
+
+</body>
+</html>

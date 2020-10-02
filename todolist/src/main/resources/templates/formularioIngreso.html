@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="#" th:action="@{insert}" th:object="${tarea}">
+        <input type="hidden"
+               id="identificador"
+               th:field="*{id}" />
+
+        <label>Nombre</label><input type="text" th:field="${tarea.nombre}">
+        <label>Descripcion</label><input type="text" th:field="${tarea.descripcion}">
+        <label>Fecha creación</label><input type="date" th:field="${tarea.fechaCre}">
+        <label>Fecha caducidad</label><input type="date" th:field="${tarea.fechaCad}">
+        <input type="submit">
+    </form>
+
+</body>
+</html>
